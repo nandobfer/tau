@@ -1,8 +1,12 @@
 import speech_recognition as sr
+import pyttsx3
 
 recognizer = sr.Recognizer()
 
-
+def speakText(command):
+    engine = pyttsx3.init()
+    engine.say(command)
+    engine.runAndWait()
 
 def getText():
     with sr.Microphone() as source2:
